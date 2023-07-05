@@ -329,3 +329,41 @@ main .blue {
 .animatepara p{
   padding: 10px;
 }
+
+.fifth-section{
+  margin: 20px 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fifth-section h4{
+  font-size: 21px;
+  margin: 25px;
+  font-weight: 590;
+}
+
+.fifth-section img{
+  height: 800px;
+  width: 1200px;
+}
+
+.six-section{
+  height: 400px;
+  width: 100vw;
+  background-color: #F8F8FD;
+  margin-top: 70px;
+}
+
+.six-section h2{
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+.six-section h3{
+  color: blue;
+  font-size: 20px;
+  text-align: center;
+}
