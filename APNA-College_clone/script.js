@@ -32,6 +32,13 @@ counterNum.forEach((curElem) => {
   updateNumber();
 });
 
+var typed = new Typed("#auto-typing", {
+  strings: ["#instagram", "#telegram", "#youtube"],
+  typeSpeed: 120,
+  backSpeed: 120,
+  loop: true,
+});
+
 // for slider
 // const slides = document.querySelectorAll(".animate-first");
 // console.log(slides);
