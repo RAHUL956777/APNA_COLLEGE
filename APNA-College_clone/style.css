@@ -6,110 +6,90 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  /* overflow-X: hidden; */
 }
+
 .navbar {
   display: flex;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  /* background-color: #f1f1f1; */
-  z-index: 999;
-}
-
-.navbar #right {
-  width: 35%;
+  width: 100%;
+  height: 80px;
+  text-align: center;
   align-items: center;
+  position: fixed;
+  background-color: white;
+}
+.logo {
+  width: 45%;
   text-align: center;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: bold;
 }
-
-.navbar #right .span1 {
+.logo .span1 {
   color: black;
 }
-.navbar #right .span2 {
-  color: rgb(244, 166, 21);
+.logo .span2 {
+  color: #ffa511;
 }
 
-.navbar #left {
-  width: 55%;
-  text-align: center;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-}
-
-#left button {
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  display: inline-block;
+button {
+  margin-left: 30px;
   font-size: 18px;
-  cursor: pointer;
-  border-radius: 4px;
-  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
-#left #btn1 {
+#btn1 {
   background-color: #6674cc;
+  color: white;
+  border: none;
 }
-#left #btn2 {
-  background-color: white;
+#btn2 {
+  border: 2px solid #6674cc;
   color: #6674cc;
-  border: 1px solid #6674cc;
 }
 
-#left ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-#left ul li {
+nav ul li {
   display: inline-block;
-  padding: 10px;
+  position: relative;
+  margin-left: 20px;
 }
 
-#left ul li a {
+nav ul li a {
+  text-decoration: none;
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #333;
-}
-#left ul li a:hover {
-  background-color: #c4c3c3;
+  font-size: 20px;
+  color: black;
 }
 
-.dropdown {
+nav ul li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0;
+  width: 200px;
   padding: 10px;
+  border-radius: 0 0 4px 4px;
+  background-color: white;
 }
 
-#left ul li:hover .dropdown {
-  display: block;
+.dropdown-menu li {
+  margin-bottom: 5px;
 }
 
-.dropdown li {
-  padding: 5px 0;
+.dropdown-menu li a {
+  color: black;
 }
-
-.dropdown li a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-}
-
-.dropdown li a:hover {
-  color: #fff;
-  background-color: #c4c3c3;
-}
-
-/* responcive style for navbar */
 
 /* first section start */
 #first-section {
@@ -279,18 +259,13 @@
 }
 
 /* foruth section */
-main {
+.fourth-section {
   height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #f8f8fd;
- 
-  overflow: hidden;
 }
-main .blue {
-  margin: 20px;
+.fourth-section .blue {
+  margin: 12px 40%;
+  padding-top: 30px;
   color: #6674cc;
 }
 
@@ -301,8 +276,8 @@ main .blue {
   background-color: white;
   height: 200px;
   width: 80%;
-
-  overflow: hidden;
+  margin: 20px 10%;
+  position: absolute;
 }
 
 .animateimg {
@@ -319,18 +294,20 @@ main .blue {
   border-radius: 50%;
 }
 
-.animatepara{
+.animatepara {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.animatepara p{
+.animatepara p {
   padding: 10px;
 }
 
-.fifth-section{
+/* fifth section */
+
+.fifth-section {
   margin: 20px 0;
   display: flex;
   text-align: center;
@@ -338,32 +315,73 @@ main .blue {
   flex-direction: column;
 }
 
-.fifth-section h4{
+.fifth-section h4 {
   font-size: 21px;
   margin: 25px;
   font-weight: 590;
 }
 
-.fifth-section img{
+.fifth-section img {
   height: 800px;
   width: 1200px;
 }
-
-.six-section{
-  height: 400px;
-  width: 100vw;
-  background-color: #F8F8FD;
+.six-section {
+  height: auto; /* Remove the fixed height */
+  width: 100%;
+  background-color: #f8f8fd;
   margin-top: 70px;
+  overflow: hidden; /* Add overflow: hidden to contain the floated elements */
 }
 
-.six-section h2{
+.six-section h2 {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 10px;
   font-size: 30px;
 }
-.six-section h3{
-  color: blue;
+
+.six-section span {
   font-size: 20px;
+  display: block; /* Change position: absolute to display: block */
+  margin: 0 auto; /* Center the span horizontally */
+}
+
+.highlight-instagram {
+  color: rgb(254, 74, 104);
+}
+
+.highlight-telegram {
+  color: rgb(41, 124, 219);
+}
+
+.highlight-youtube {
+  color: red;
+}
+
+#wrapper {
+  position: relative;
+  top: 30px;
+  margin: 20px;
+  background-color: red;
+  display: flex;
+  width: 100%;
+  height: 230px;
+  margin-bottom: 100px;
+  align-items: center;
   text-align: center;
+}
+
+#first {
+  background-color: blue;
+  width: 30%;
+}
+
+#second {
+  background-color: #333;
+  width: 30%;
+}
+
+#third {
+  background-color: #ffa511;
+  width: 30%;
 }
